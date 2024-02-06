@@ -1,0 +1,17 @@
+name: Initial Commit
+
+on:
+  create:
+    branches: [main]
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      repository-projects: read
+      packages: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
